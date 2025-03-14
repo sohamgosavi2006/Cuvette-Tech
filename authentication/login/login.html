@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cuvette Tech</title>
+
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h2 class="text-center mb-4">Login</h2>
+
+            <!-- Email Login Form -->
+            <form action="#" method="POST">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe" class="form-label ms-2">Remember Me</label>
+                    </div>
+                    <a href="#" class="forgotPasswordButton">Forgot Password?</a>
+                    
+                </div>
+                <button type="submit" class="login loginButton">Login</button>
+            </form>
+
+            <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="forgotPasswordModalLabel">Password Reset</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           Please check inbox to change Password for your account !
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr> <!-- Separator -->
+
+            <!-- Google Sign-In Button -->
+            <div class="google-login googleLogin">
+                <button class="google-btn">
+                    <img src="./Logo/google-logo.png" alt="Google Logo">
+                    Sign in with Google
+                </button>
+            </div>
+
+            <!-- Signup Link -->
+            <div class="text-center mt-3">
+                <p>Don't have an account? <a href="../sign-up/signup.html">Sign Up!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+    <!-- BOOTSTRAP  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="login.js" defer></script>
+
+</body>
+
+</html>
