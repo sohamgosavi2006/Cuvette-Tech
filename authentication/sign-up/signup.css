@@ -1,0 +1,132 @@
+/* Centered container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Signup box with larger width */
+.signup-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 800px; /* Keeps it large but controlled */
+    text-align: center;
+}
+
+/* Two-column layout */
+.signup-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Left & Right Sections */
+.signup-left, .signup-right {
+    width: 48%;
+    text-align: left;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form fields */
+.input-group {
+    margin-bottom: 20px;
+    width: 100%; /* Ensure the fields don't exceed container width */
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: calc(100% - 24px); /* Adjust width to prevent overflow */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box; /* Prevents the field from overflowing */
+}
+
+.input-group input:focus {
+    border-color: #2a5298;
+}
+
+/* Buttons */
+.signup-btn, .otp-btn, .google-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.signup-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: #0056b3;
+}
+
+.otp-btn {
+    background-color: #ff9800;
+    color: white;
+}
+
+.otp-btn:hover {
+    background-color: #e68900;
+}
+
+/* Increased spacing between "Send OTP" & "Enter OTP" */
+#send-otp {
+    margin-bottom: 20px;
+}
+
+/* Google Button */
+.google-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.google-btn:hover {
+    background-color: #f4f4f4;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
