@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'docs')));
+app.use(express.static(path.join(__dirname, '/docs')));
 
 // PostgreSQL Connection
 const client = new Client({
