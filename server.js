@@ -19,7 +19,8 @@ const client = new Client({
     user: "postgres",
     password: "Soham_2006",
     port: 5432,
-    database: "postgres"
+    database: "postgres",
+    ssl: { rejectUnauthorized: false } // Important for Vercel
 });
 
 client.connect()
