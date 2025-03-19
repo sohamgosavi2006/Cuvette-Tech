@@ -15,11 +15,11 @@ app.use(express.static(path.join(__dirname, 'docs')));
 
 // PostgreSQL Connection
 const client = new Client({
-    host: "localhost",
+    host: "db.wzaoesixcrsvislfvdxj.supabase.co",
     user: "postgres",
-    port: 3000, // SET YOUR DATABASE PORT
-    password: "2255", // SET YOUR DATABASE PASSWORD
-    database: "cuvette_tech" // SET YOUR DATABASE NAME
+    password: "Soham_2006",
+    port: 5432,
+    database: "postgres"
 });
 
 client.connect()
