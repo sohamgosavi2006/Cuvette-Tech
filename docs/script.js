@@ -126,7 +126,7 @@ fullTimeJobElement.addEventListener('click', (event) => {
                         attachSearchListeners();
                         const jobListingsContainer = document.querySelector('.jobListings');
                         if (jobListingsContainer) {
-                            fetch('http://localhost:1000/api/jobs')
+                            fetch('https://cuvette-tech-6grl.vercel.app/')
                                 .then(response => response.json())
                                 .then(jobs => {
                                     jobListingsContainer.innerHTML = '';
@@ -193,7 +193,7 @@ otherJobElement.addEventListener('click', (event) => {
                         initOtherJobsSearch(); // Initialize search listener from other-jobs.js
                         const jobListingsContainer = document.querySelector('.jobListings');
                         if (jobListingsContainer) {
-                            fetch('http://localhost:1000/api/other-jobs')
+                            fetch('https://cuvette-tech-6grl.vercel.app/')
                                 .then(response => response.json())
                                 .then(jobs => {
                                     jobListingsContainer.innerHTML = '';
