@@ -15,9 +15,9 @@ app.use(express.static(path.join(__dirname, 'docs')));
 
 // PostgreSQL Connection
 const client = new Client({
-    host: "db.wzaoesixcrsvislfvdxj.supabase.co",
+    host: "db.oojxbtllsxwsodliwdwy.supabase.co",
     user: "postgres",
-    password: "Soham_2006",
+    password: "@30Soham_2006",
     port: 5432,
     database: "postgres",
     ssl: { rejectUnauthorized: false } // Important for Vercel
