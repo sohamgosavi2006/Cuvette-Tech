@@ -43,7 +43,7 @@
       },
       {
         "src": "/(index|index.html)",
-        "dest": "/index.html"
+        "dest": "/docs/SIDEBAR-PAGES/index.html"
       },
       {
         "src": "/(about|applied-jobs|full-time-job|other-jobs)(.html)?",
