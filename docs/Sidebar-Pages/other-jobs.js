@@ -91,7 +91,7 @@ export function searchListener() {
 // Function to fetch and display other jobs
 async function callOtherJobsContent() {
     try {
-        const response = await fetch("https://cuvette-tech-h8aj.vercel.app/");
+        const response = await fetch("https://cuvette-tech.vercel.app/");
         const jobs = await response.json();
 
         const jobListings = document.querySelector(".jobListings"); 
