@@ -7,8 +7,17 @@ const app = express();
 const PORT = 1000;
 
 // Enable CORS for frontend requests
-app.use(cors());
-app.use(express.json());
+// Configure CORS to allow requests from your frontend
+const corsOptions = {
+    origin: [
+      "http://127.0.0.1:5500", // Local development
+      "https://cuvette-tech.vercel.app", // Vercel deployment
+    ],
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  };
+  
+  app.use(cors(corsOptions)); // Apply CORS middlewareapp.use(express.json());
 
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'docs')));
