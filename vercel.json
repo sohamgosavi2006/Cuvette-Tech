@@ -42,7 +42,7 @@
         "dest": "/docs/IMAGES/$1"
       },
       {
-        "src": "/(index|index.html)",
+        "src": "/",
         "dest": "/index.html"
       },
       {
