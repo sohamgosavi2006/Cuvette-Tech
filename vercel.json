@@ -1,65 +1,59 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "index.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "docs/**/*.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "authentication/**/*.html",
-        "use": "@vercel/static"
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "**/*.@(js|css|html|png|jpg|svg)",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+               "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+        "Access-Control-Allow-Headers": "Content-Type,Authorization"
       }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/server.js",
-        "headers": {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
-          "Access-Control-Allow-Headers": "Content-Type,Authorization"
-        }
-      },
-      { "src": "/(.*)", "dest": "/docs/index.html" },
-      {
-        "src": "/(style.css|script.js)",
-        "dest": "/$1"
-      },
-      {
-        "src": "/authentication/login/(logo/.*|login.css|login.js)",
-        "dest": "/authentication/login/$1"
-      },
-      {
-        "src": "/docs/IMAGES/(.*)",
-        "dest": "/docs/IMAGES/$1"
-      },
-      {
-        "src": "/(index|index.html)",
-        "dest": "/docs/SIDEBAR-PAGES/index.html"
-      },
-      {
-        "src": "/(about|applied-jobs|full-time-job|other-jobs)(.html)?",
-        "dest": "/docs/SIDEBAR-PAGES/$1.html"
-      },
-      {
-        "src": "/login(.html)?",
-        "dest": "/authentication/login/login.html"
-      },
-      {
-        "src": "/sign-up(.html)?",
-        "dest": "/authentication/sign-up/sign-up.html"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/server.js"
+    },
+    {
+      "src": "/(.*\\.js)",
+      "dest": "/$1",
+      "headers": {
+        "Content-Type": "application/javascript"
       }
-    ]
-  }
+    },
+    {
+      "src": "/(style.css|script.js)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/docs/IMAGES/(.*)",
+      "dest": "/docs/IMAGES/$1"
+    },
+    {
+      "src": "/login(.html)?",
+      "dest": "/authentication/login/login.html"
+    },
+    {
+      "src": "/sign-up(.html)?",
+      "dest": "/authentication/sign-up/sign-up.html"
+    },
+    {
+      "src": "/(about|applied-jobs|full-time-job|other-jobs)",
+      "dest": "/docs/Sidebar-Pages/$1.html"
+    },
+    {
+      "src": "/(index|index.html)",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

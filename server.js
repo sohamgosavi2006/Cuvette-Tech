@@ -20,6 +20,14 @@ const allowedOrigins = [
       optionsSuccessStatus: 200
     })
   );
+
+  // Add MIME type enforcement
+app.use((req, res, next) => {
+    if (req.url.endsWith('.js')) {
+      res.setHeader('Content-Type', 'application/javascript');
+    }
+    next();
+  });
   
   // Other middleware and routes
   app.use(express.json());
