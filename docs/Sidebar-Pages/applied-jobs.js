@@ -19,7 +19,7 @@ export function redirectToFullTimeJobs() {
                         // Fetch and render Other Jobs
                         const jobListingsContainer = document.querySelector('.jobListings');
                         if (jobListingsContainer) {
-                            fetch('https://cuvette-tech.vercel.app/')
+                            fetch('/api/other-jobs')
                                 .then(response => response.json())
                                 .then(jobs => {
                                     jobListingsContainer.innerHTML = '';

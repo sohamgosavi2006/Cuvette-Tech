@@ -6,20 +6,23 @@ const path = require("path");
 const app = express();
 const PORT = 1000;
 
-// Enable CORS for frontend requests
-// Configure CORS to allow requests from your frontend
-const corsOptions = {
-    origin: [
-      "http://127.0.0.1:5500", // Local development
-      "https://cuvette-tech.vercel.app", // Vercel deployment
-    ],
-    methods: "GET,POST,PUT,DELETE",
-    credentials: true,
-  };
+// CORS Configuration (Do this FIRST)
+const allowedOrigins = [
+    "http://127.0.0.1:5500",     // Local development (VS Code Live Server)
+    "https://cuvette-tech.vercel.app" // Production frontend
+  ];
   
-  app.use(cors(corsOptions)); // Apply CORS middlewareapp.use(express.json());
-
-// Serve static files from the 'public' directory
+  app.use(
+    cors({
+      origin: allowedOrigins,
+      methods: "GET,POST,PUT,DELETE",
+      credentials: true, // Allow cookies/auth headers
+      optionsSuccessStatus: 200
+    })
+  );
+  
+  // Other middleware and routes
+  app.use(express.json());
 app.use(express.static(path.join(__dirname, 'docs')));
 
 // PostgreSQL Connection

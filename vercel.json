@@ -21,8 +21,14 @@
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "/server.js"
+        "dest": "/server.js",
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+          "Access-Control-Allow-Headers": "Content-Type,Authorization"
+        }
       },
+      { "src": "/(.*)", "dest": "/docs/index.html" },
       {
         "src": "/(style.css|script.js)",
         "dest": "/$1"
